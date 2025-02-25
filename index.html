@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorry Pepen 💌</title>
+  <style>
+    /* Cute Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pacifico&display=swap');
+
+    body {
+      font-family: 'Indie Flower', cursive;
+      background-color: #fff5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .envelope {
+      width: 300px;
+      height: 200px;
+      background-color: #ff6b6b;
+      position: relative;
+      cursor: pointer;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .envelope:hover {
+      transform: scale(1.05);
+    }
+
+    .envelope:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 50%;
+      background-color: #ff4d4d;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .envelope:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-left: 150px solid transparent;
+      border-right: 150px solid transparent;
+      border-top: 100px solid #ff4d4d;
+      transform: translate(-50%, -50%);
+    }
+
+    .message {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #333;
+      font-size: 20px;
+      z-index: 2;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 80%;
+    }
+
+    .envelope.open .message {
+      display: block;
+    }
+
+    .envelope.open:before,
+    .envelope.open:after {
+      display: none;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      color: #ff6b6b;
+      margin: 0;
+    }
+
+    .capybara {
+      width: 100px;
+      margin: 10px auto;
+      display: block;
+    }
+
+    .heart {
+      color: #ff6b6b;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="envelope" onclick="this.classList.toggle('open')">
+    <div class="message">
+      <h1>Dear Pepen,</h1>
+      <p>I'm really sorry for my mistake. 😔</p>
+      <p>You mean the world to me, and I never want to hurt you.</p>
+      <p>Please forgive me. 💖</p>
+      <!-- Replace the src below with your direct image link -->
+      <img class="capybara" src="https://imgur.com/gallery/7ZsSf" alt="Cute Capybara">
+      <p>Yours always,</p>
+      <p>[MEME]</p>
+      <p class="heart"❤️</p>
+    </div>
+  </div>
+</body>
+</html>
